@@ -1,8 +1,5 @@
-const inquirer = require('inquirer');
 const connection = require('../connection');
-const db = require("./db");
 const table = require("console.table");
-
 
 function allEmployee() {
     console.log("You are viewing all employees\n");
@@ -27,14 +24,14 @@ function allDepartments() {
 function allRoles() {
     console.log("You are viewing all roles");
 // query to mysql for roles table
-    connection.query(`SELECT * FROM roles`, function (err, chocie) {
+    connection.query(`SELECT * FROM roles`, function (err, choice) {
         if (err) throw err;
         console.table(choice);
         console.log("roles view sucessed\n")
     })
 
 };
-// exports functions
+// exports function modules
 module.exports = {
     allEmployee, allDepartments, allRoles
 }

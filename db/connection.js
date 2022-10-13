@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
   // Your username
   user: "root",
   // Your password
-  password: "e4F83Xeht#",
+  password: "",
   database: "datatrackerDB"
 }, 
 console.log('Connected to the data.')
